@@ -29,7 +29,7 @@ export const GROSS_INCOME = {
   },
   yaxis: {
     title: {
-      text: 'Gross Income'
+      text: 'Gross Income ($)'
     },
     labels: {
       formatter: (value: number) => {
@@ -38,7 +38,7 @@ export const GROSS_INCOME = {
         } else if (value >= 1000000) {
           return `$ ${(value / 1000000).toFixed(1)}M`;
         } else {
-          return `$ ${value}`
+          return `$ ${value}`;
         }
       }
     }

@@ -7,6 +7,13 @@ import {
   BY_MOVIE,
   BY_YEAR
 } from './data/gross-income';
+import {
+  PROFITS_TITLE,
+  PROFITS_DESCRIPTION,
+  PROFITS,
+  BY_REVENUE,
+  BY_PERCENTAGE
+} from './data/profits-and-losses';
 
 @Component({
   selector: 'app-root',
@@ -21,16 +28,23 @@ export class AppComponent implements OnInit {
   grossIncomeTitle: string;
   grossIncomeDescription: string;
 
+  profits: any;
+  profitsTitle: string;
+  profitsDescription: string;
+
   ngOnInit() {
     this.title = "Marvel Cinematic Universe";
 
     this.setGrossIncome('by-movie');
-    this.grossIncomeTitle = GROSS_INCOME_TITLE;
-    this.grossIncomeDescription = GROSS_INCOME_DESCRIPTION;
+    this.setProfits('by-revenue');
   }
 
-  onToggleClicked(value: string) {
+  onGrossIncomeToggleClicked(value: string) {
     this.setGrossIncome(value);
+  }
+
+  onProfitsToggleClicked(value: string) {
+    this.setProfits(value)
   }
 
   private setGrossIncome(value: string) {
@@ -59,6 +73,36 @@ export class AppComponent implements OnInit {
         legend: GROSS_INCOME.legend
       };
     }
+    this.grossIncomeTitle = GROSS_INCOME_TITLE;
+    this.grossIncomeDescription = GROSS_INCOME_DESCRIPTION;
+  }
+
+  private setProfits(value: string) {
+    if (value === 'by-revenue') {
+      this.profits = {
+        title: PROFITS.title,
+        chart: PROFITS.chart,
+        dataLabels: PROFITS.dataLabels,
+        stroke: PROFITS.stroke,
+        grid: PROFITS.grid,
+        series: BY_REVENUE.series,
+        xaxis: PROFITS.xaxis,
+        yaxis: BY_REVENUE.yaxis
+      };
+    } else {
+      this.profits = {
+        title: PROFITS.title,
+        chart: PROFITS.chart,
+        dataLabels: PROFITS.dataLabels,
+        stroke: PROFITS.stroke,
+        grid: PROFITS.grid,
+        series: BY_PERCENTAGE.series,
+        xaxis: PROFITS.xaxis,
+        yaxis: BY_PERCENTAGE.yaxis
+      };
+    }
+    this.profitsTitle = PROFITS_TITLE;
+    this.profitsDescription = PROFITS_DESCRIPTION;
   }
 
 }
