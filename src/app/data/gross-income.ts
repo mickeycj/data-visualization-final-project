@@ -28,6 +28,9 @@ export const GROSS_INCOME = {
     }
   },
   yaxis: {
+    title: {
+      text: 'Gross Income'
+    },
     labels: {
       formatter: (value: number) => {
         if (value >= 1000000000) {
@@ -131,6 +134,9 @@ export const BY_MOVIE = {
     align: 'left'
   },
   xaxis: {
+    title: {
+      text: 'Movie'
+    },
     categories: [
       'Iron Man',
       'The Incredible Hulk',
@@ -217,6 +223,9 @@ export const BY_YEAR = {
     align: 'left'
   },
   xaxis: {
+    title: {
+      text: 'Year'
+    },
     categories: [
       '2008',
       '2009',
