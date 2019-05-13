@@ -10,6 +10,6 @@ export class HeaderComponent {
   @Input()
   title: string;
 
-  home = '/';
+  home = '/data-visualization-final-project';
 
 }
