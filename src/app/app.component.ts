@@ -43,7 +43,8 @@ export class AppComponent implements OnInit {
         grid: GROSS_INCOME.grid,
         series: BY_MOVIE.series,
         xaxis: BY_MOVIE.xaxis,
-        yaxis: GROSS_INCOME.yaxis
+        yaxis: GROSS_INCOME.yaxis,
+        legend: GROSS_INCOME.legend 
       };
     } else {
       this.grossIncome = {
@@ -54,7 +55,8 @@ export class AppComponent implements OnInit {
         grid: GROSS_INCOME.grid,
         series: BY_YEAR.series,
         xaxis: BY_YEAR.xaxis,
-        yaxis: GROSS_INCOME.yaxis
+        yaxis: GROSS_INCOME.yaxis,
+        legend: GROSS_INCOME.legend
       };
     }
   }

@@ -42,6 +42,9 @@ export const GROSS_INCOME = {
         }
       }
     }
+  },
+  legend: {
+    position: 'top'
   }
 };
 
