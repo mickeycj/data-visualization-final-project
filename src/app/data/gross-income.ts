@@ -49,6 +49,10 @@ export const GROSS_INCOME = {
 };
 
 export const BY_MOVIE = {
+  toggle: {
+    title: 'By movie',
+    value: 'by-movie'
+  },
   series: [
     {
       name: 'Worldwide',
@@ -168,6 +172,10 @@ export const BY_MOVIE = {
 };
 
 export const BY_YEAR = {
+  toggle: {
+    title: 'By year',
+    value: 'by-year'
+  },
   series: [
     {
       name: 'Worldwide',

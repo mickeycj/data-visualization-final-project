@@ -3,14 +3,14 @@
 <mat-grid-list cols="3" rows="6" rowHeight="720px">
   <mat-grid-tile colspan="2">
     <mat-grid-list cols="1" rows="2">
-      <mat-button-toggle-group id="gross-income-toggle" value="by-movie">
-        <mat-button-toggle value="by-movie"
+      <mat-button-toggle-group id="gross-income-toggle" [value]="byMovieToggle.value">
+        <mat-button-toggle [value]="byMovieToggle.value"
                            (change)="onGrossIncomeToggleClicked($event.value)">
-          <span>By Movie</span>
+          <span>{{ byMovieToggle.title }}</span>
         </mat-button-toggle>
-        <mat-button-toggle value="by-year"
+        <mat-button-toggle [value]="byYearToggle.value"
                            (change)="onGrossIncomeToggleClicked($event.value)">
-          <span>By Year</span>
+          <span>{{ byYearToggle.title }}</span>
         </mat-button-toggle>
       </mat-button-toggle-group>
       <apx-chart [title]="grossIncome.title"
@@ -31,19 +31,19 @@
   </mat-grid-tile>
   <mat-grid-tile>
     <app-description side="left"
-                      [title]="profitsTitle"
-                      [description]="profitsDescription"></app-description>
+                     [title]="profitsTitle"
+                     [description]="profitsDescription"></app-description>
   </mat-grid-tile>
   <mat-grid-tile colspan="2">
     <mat-grid-list cols="1" row="2">
-      <mat-button-toggle-group id="profits-toggle" value="by-revenue">
-        <mat-button-toggle value="by-revenue"
+      <mat-button-toggle-group id="profits-toggle" [value]="byRevenueToggle.value">
+        <mat-button-toggle [value]="byRevenueToggle.value"
                             (change)="onProfitsToggleClicked($event.value)">
-          <span>By Revenue</span>
+          <span>{{ byRevenueToggle.title }}</span>
         </mat-button-toggle>
-        <mat-button-toggle value="by-percentage"
+        <mat-button-toggle [value]="byPercentageToggle.value"
                             (change)="onProfitsToggleClicked($event.value)">
-          <span>By Percentage</span>
+          <span>{{ byPercentageToggle.title }}</span>
         </mat-button-toggle>
       </mat-button-toggle-group>
       <apx-chart id="profits-chart"

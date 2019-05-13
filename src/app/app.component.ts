@@ -27,10 +27,14 @@ export class AppComponent implements OnInit {
   grossIncome: any;
   grossIncomeTitle: string;
   grossIncomeDescription: string;
+  byMovieToggle: any;
+  byYearToggle: any;
 
   profits: any;
   profitsTitle: string;
   profitsDescription: string;
+  byRevenueToggle: any;
+  byPercentageToggle: any;
 
   ngOnInit() {
     this.title = "Marvel Cinematic Universe";
@@ -75,6 +79,8 @@ export class AppComponent implements OnInit {
     }
     this.grossIncomeTitle = GROSS_INCOME_TITLE;
     this.grossIncomeDescription = GROSS_INCOME_DESCRIPTION;
+    this.byMovieToggle = BY_MOVIE.toggle;
+    this.byYearToggle = BY_YEAR.toggle;
   }
 
   private setProfits(value: string) {
@@ -103,6 +109,8 @@ export class AppComponent implements OnInit {
     }
     this.profitsTitle = PROFITS_TITLE;
     this.profitsDescription = PROFITS_DESCRIPTION;
+    this.byRevenueToggle = BY_REVENUE.toggle;
+    this.byPercentageToggle = BY_PERCENTAGE.toggle;
   }
 
 }

@@ -63,6 +63,10 @@ export const PROFITS = {
 };
 
 export const BY_REVENUE = {
+  toggle: {
+    title: 'By revenue',
+    value: 'by-revenue'
+  },
   series: [
     {
       name: 'Profit/Loss',
@@ -112,6 +116,10 @@ export const BY_REVENUE = {
 };
 
 export const BY_PERCENTAGE = {
+  toggle: {
+    title: 'By percentage',
+    value: 'by-percentage'
+  },
   series: [
     {
       name: 'Profit/Loss',
