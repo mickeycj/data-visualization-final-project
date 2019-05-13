@@ -1,0 +1,19 @@
+.right-aligned {
+  text-align: right;
+  margin-right: 80px;
+}
+.left-aligned {
+  text-align: left;
+  margin-left: 80px;
+}
+
+.title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.description {
+  font-size: 16px;
+}
+.title, .description {
+  color: #1A1A64;
+}
