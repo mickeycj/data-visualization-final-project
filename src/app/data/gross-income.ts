@@ -1,8 +1,8 @@
 export const GROSS_INCOME_TITLE = 'Gross income since the start of the MCU';
 
 export const GROSS_INCOME_DESCRIPTION = `
-  An American franchise and shared superhero universe that is centered on the storieds created by
-  Marvel Comics. It has been independently produced by Marvel Studios over a decade and made
+  An American film franchise and shared superhero universe that is centered on the stories created
+  by Marvel Comics. It has been independently produced by Marvel Studios over a decade and made
   billions worldwide.
 `;
 
