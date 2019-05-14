@@ -23,6 +23,7 @@ export const RATINGS_PER_PHASE = {
   pieChart: {
     height: 400,
     width: 400,
+    foreColor: '#1A1A64',
     type: 'pie',
     zoom: {
       enabled: false
@@ -47,6 +48,7 @@ export const RATINGS_PER_PHASE = {
   radialChart: {
     height: 400,
     width: 400,
+    foreColor: '#1A1A64',
     type: 'radialBar',
     zoom: {
       enabled: false

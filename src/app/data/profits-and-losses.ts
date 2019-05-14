@@ -17,6 +17,7 @@ export const PROFITS = {
   chart: {
     height: 600,
     width: 1050,
+    foreColor: '#1A1A64',
     type: 'line',
     zoom: {
       enabled: false
