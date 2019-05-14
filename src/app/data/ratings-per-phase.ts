@@ -168,7 +168,7 @@ export const PHASE_3 = {
   },
   pieLabels: [
     'Avengers: Endgame',
-    'Avengers: lnfinity War',
+    'Avengers: Infinity War',
     'Black Panther',
     'Captain America: Civil War',
     'Captain Marvel',

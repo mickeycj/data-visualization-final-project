@@ -62,7 +62,7 @@ export const PROFITS = {
       'Spider-Man: Homecoming',
       'Thor: Ragnaork',
       'Black Panther',
-      'Avengers: lnfinity War',
+      'Avengers: Inf. War',
       'Ant-Man and the Wasp',
       'Captain Marvel',
       'Avengers: Endgame'
