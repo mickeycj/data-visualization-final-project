@@ -40,11 +40,11 @@
     <mat-grid-list cols="1">
       <mat-button-toggle-group id="profits-toggle" [value]="byRevenueToggle.value">
         <mat-button-toggle [value]="byRevenueToggle.value"
-                            (change)="onProfitsToggleClicked($event.value)">
+                           (change)="onProfitsToggleClicked($event.value)">
           <span>{{ byRevenueToggle.title }}</span>
         </mat-button-toggle>
         <mat-button-toggle [value]="byPercentageToggle.value"
-                            (change)="onProfitsToggleClicked($event.value)">
+                           (change)="onProfitsToggleClicked($event.value)">
           <span>{{ byPercentageToggle.title }}</span>
         </mat-button-toggle>
       </mat-button-toggle-group>
