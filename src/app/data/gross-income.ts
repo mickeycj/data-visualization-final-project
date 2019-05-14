@@ -10,6 +10,7 @@ export const GROSS_INCOME = {
   chart: {
     height: 500,
     width: 1050,
+    fontFamily: 'Marvel, arial, sans-serif',
     foreColor: '#1A1A64',
     type: 'line',
     zoom: {
@@ -32,24 +33,31 @@ export const GROSS_INCOME = {
     title: {
       text: 'Gross Income ($)',
       style: {
-        fontSize: '20px'
+        fontSize: '28px'
       }
     },
     labels: {
       formatter: (value: number) => {
         if (value >= 1000000000) {
-          return `$ ${(value / 1000000000).toFixed(1)}B`;
+          return `$ ${(value / 1000000000).toFixed(1)} B`;
         } else if (value >= 1000000) {
-          return `$ ${(value / 1000000).toFixed(1)}M`;
+          return `$ ${(value / 1000000).toFixed(1)} M`;
         } else {
           return `$ ${value}`;
         }
+      },
+      style: {
+        fontSize: '16px'
       }
     }
   },
   legend: {
     position: 'top',
-    offsetY: -24
+    offsetY: -24,
+    markers: {
+      offsetY: '-2px'
+    },
+    fontSize: '16px'
   },
   responsive: [
     {
@@ -121,7 +129,7 @@ export const BY_MOVIE = {
     text: 'Gross Income by Movie',
     align: 'left',
     style: {
-      fontSize: '20px'
+      fontSize: '28px'
     }
   },
   series: [
@@ -211,7 +219,7 @@ export const BY_MOVIE = {
     title: {
       text: 'Movie',
       style: {
-        fontSize: '20px'
+        fontSize: '28px'
       }
     },
     categories: [
@@ -237,7 +245,12 @@ export const BY_MOVIE = {
       'Ant-Man and the Wasp',
       'Captain Marvel',
       'Avengers: Endgame'
-    ]
+    ],
+    labels: {
+      style: {
+        fontSize: '16px'
+      }
+    }
   }
 };
 
@@ -250,7 +263,7 @@ export const BY_YEAR = {
     text: 'Gross Income by Year',
     align: 'left',
     style: {
-      fontSize: '20px'
+      fontSize: '28px'
     }
   },
   series: [
@@ -310,7 +323,7 @@ export const BY_YEAR = {
     title: {
       text: 'Year',
       style: {
-        fontSize: '20px'
+        fontSize: '28px'
       }
     },
     categories: [
@@ -326,6 +339,11 @@ export const BY_YEAR = {
       '2017',
       '2018',
       '2019'
-    ]
+    ],
+    labels: {
+      style: {
+        fontSize: '16px'
+      }
+    }
   }
 };

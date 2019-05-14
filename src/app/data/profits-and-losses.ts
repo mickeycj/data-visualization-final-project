@@ -11,12 +11,13 @@ export const PROFITS = {
   title: {
     text: 'Profits and Losses',
     style: {
-      fontSize: '20px'
+      fontSize: '28px'
     }
   },
   chart: {
     height: 600,
     width: 1050,
+    fontFamily: 'Marvel, arial, sans-serif',
     foreColor: '#1A1A64',
     type: 'line',
     zoom: {
@@ -39,7 +40,7 @@ export const PROFITS = {
     title: {
       text: 'Movie',
       style: {
-        fontSize: '20px'
+        fontSize: '28px'
       }
     },
     categories: [
@@ -65,7 +66,12 @@ export const PROFITS = {
       'Ant-Man and the Wasp',
       'Captain Marvel',
       'Avengers: Endgame'
-    ]
+    ],
+    labels: {
+      style: {
+        fontSize: '16px'
+      }
+    }
   },
   responsive: [
     {
@@ -167,18 +173,21 @@ export const BY_REVENUE = {
     title: {
       text: 'Profit/Loss ($)',
       style: {
-        fontSize: '20px'
+        fontSize: '28px'
       }
     },
     labels: {
       formatter: (value: number) => {
         if (value >= 1000000000) {
-          return `$ ${(value / 1000000000).toFixed(1)}B`;
+          return `$ ${(value / 1000000000).toFixed(1)} B`;
         } else if (value >= 1000000) {
-          return `$ ${(value / 1000000).toFixed(1)}M`;
+          return `$ ${(value / 1000000).toFixed(1)} M`;
         } else {
           return `$ ${value}`;
         }
+      },
+      style: {
+        fontSize: '16px'
       }
     }
   }
@@ -223,12 +232,15 @@ export const BY_PERCENTAGE = {
     title: {
       text: 'Profit/Loss (%)',
       style: {
-        fontSize: '20px'
+        fontSize: '28px'
       }
     },
     labels: {
       formatter: (value: number) => {
         return `${value} %`;
+      },
+      style: {
+        fontSize: '16px'
       }
     }
   }

@@ -218,7 +218,7 @@ export class AppComponent implements OnInit {
         this.ratingsPerPhaseRating.title = {
           text: this.ratingsPerPhaseIncome.labels[index],
           style: {
-            fontSize: '20px'
+            fontSize: '28px'
           }
         };
         this.ratingsPerPhaseRating.series = [this.ratingsPerPhaseRating.data[index]];
@@ -227,7 +227,7 @@ export class AppComponent implements OnInit {
     this.ratingsPerPhaseRating.title = {
       text: this.ratingsPerPhaseIncome.labels[0],
       style: {
-        fontSize: '20px'
+        fontSize: '28px'
       }
     };
     this.ratingsPerPhaseTitle = RATINGS_PER_PHASE_TITLE;
