@@ -174,7 +174,7 @@ export class AppComponent implements OnInit {
         labels: RATINGS_PER_PHASE.radialLabels,
         series: [PHASE_1.radialSeries[0]],
         data: PHASE_1.radialSeries
-      }
+      };
     } else if (value === PHASE_2.toggle.value) {
       this.ratingsPerPhaseIncome = {
         title: RATINGS_PER_PHASE.pieTitle,
@@ -192,7 +192,7 @@ export class AppComponent implements OnInit {
         labels: RATINGS_PER_PHASE.radialLabels,
         series: [PHASE_2.radialSeries[0]],
         data: PHASE_2.radialSeries
-      }
+      };
     } else {
       this.ratingsPerPhaseIncome = {
         title: RATINGS_PER_PHASE.pieTitle,
@@ -210,7 +210,7 @@ export class AppComponent implements OnInit {
         labels: RATINGS_PER_PHASE.radialLabels,
         series: [PHASE_3.radialSeries[0]],
         data: PHASE_3.radialSeries
-      }
+      };
     }
     this.ratingsPerPhaseIncome.chart.events = {
       dataPointSelection: (event: Event, chartContext: any, config: any) => {
