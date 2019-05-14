@@ -59,7 +59,66 @@ export const PROFITS = {
       'Captain Marvel',
       'Avengers: Endgame'
     ]
-  }
+  },
+  responsive: [
+    {
+      breakpoint: 1600,
+      options: {
+          chart: {
+          width: 900
+        }
+      }
+    },
+    {
+      breakpoint: 1400,
+      options: {
+        chart: {
+          width: 750
+        }
+      }
+    },
+    {
+      breakpoint: 1150,
+      options: {
+        chart: {
+          width: 600
+        }
+      }
+    },
+    {
+      breakpoint: 1000,
+      options: {
+        chart: {
+          width: 750
+        }
+      }
+    },
+    {
+      breakpoint: 800,
+      options: {
+        chart: {
+          width: 600
+        }
+      }
+    },
+    {
+      breakpoint: 650,
+      options: {
+        chart: {
+          width: 450
+        }
+      }
+    },
+    {
+      breakpoint: 500,
+      options: {
+        chart: {
+          height: 400,
+          width: 350
+        }
+      }
+    }
+  ]
 };
 
 export const BY_REVENUE = {

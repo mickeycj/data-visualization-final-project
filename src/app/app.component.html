@@ -1,7 +1,7 @@
 <app-header [title]="title"></app-header>
 
-<mat-grid-list cols="3" rows="6" rowHeight="720px">
-  <mat-grid-tile colspan="2">
+<mat-grid-list [cols]="cols" rows="6" rowHeight="720px" (window:resize)="onResize($event)">
+  <mat-grid-tile [colspan]="chartColSpan">
     <mat-grid-list cols="1" rows="2">
       <mat-button-toggle-group id="gross-income-toggle" [value]="byMovieToggle.value">
         <mat-button-toggle [value]="byMovieToggle.value"
@@ -21,7 +21,8 @@
                  [series]="grossIncome.series"
                  [xaxis]="grossIncome.xaxis"
                  [yaxis]="grossIncome.yaxis"
-                 [legend]="grossIncome.legend"></apx-chart>
+                 [legend]="grossIncome.legend"
+                 [responsive]="grossIncome.responsive"></apx-chart>
     </mat-grid-list>
   </mat-grid-tile>
   <mat-grid-tile>
@@ -34,7 +35,7 @@
                      [title]="profitsTitle"
                      [description]="profitsDescription"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile colspan="2">
+  <mat-grid-tile [colspan]="chartColSpan">
     <mat-grid-list cols="1" row="2">
       <mat-button-toggle-group id="profits-toggle" [value]="byRevenueToggle.value">
         <mat-button-toggle [value]="byRevenueToggle.value"
@@ -54,10 +55,11 @@
                  [grid]="profits.grid"
                  [series]="profits.series"
                  [xaxis]="profits.xaxis"
-                 [yaxis]="profits.yaxis"></apx-chart>
+                 [yaxis]="profits.yaxis"
+                 [responsive]="profits.responsive"></apx-chart>
     </mat-grid-list>
   </mat-grid-tile>
-  <mat-grid-tile colspan="2">3</mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">3</mat-grid-tile>
   <mat-grid-tile>
     <app-description side="right"
                       [title]="'Title 3'"
@@ -68,8 +70,8 @@
                       [title]="'Title 4'"
                       [description]="'Description 4'"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile colspan="2">4</mat-grid-tile>
-  <mat-grid-tile colspan="2">5</mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">4</mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">5</mat-grid-tile>
   <mat-grid-tile>
     <app-description side="right"
                       [title]="'Title 5'"
@@ -80,7 +82,7 @@
                       [title]="'Title 6'"
                       [description]="'Description 6'"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile colspan="2">6</mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">6</mat-grid-tile>
 </mat-grid-list>
 
 <app-footer></app-footer>

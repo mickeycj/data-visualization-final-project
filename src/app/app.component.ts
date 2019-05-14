@@ -24,6 +24,9 @@ export class AppComponent implements OnInit {
 
   title: string;
 
+  cols: number
+  chartColSpan: number
+
   grossIncome: any;
   grossIncomeTitle: string;
   grossIncomeDescription: string;
@@ -39,8 +42,14 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.title = "Marvel Cinematic Universe";
 
+    this.setColSpan();
+
     this.setGrossIncome('by-movie');
     this.setProfits('by-revenue');
+  }
+
+  onResize(event) {
+    this.setColSpan();
   }
 
   onGrossIncomeToggleClicked(value: string) {
@@ -49,6 +58,11 @@ export class AppComponent implements OnInit {
 
   onProfitsToggleClicked(value: string) {
     this.setProfits(value)
+  }
+
+  private setColSpan() {
+    this.cols = (window.innerWidth < 1000) ? 1 : 3;
+    this.chartColSpan = (window.innerWidth < 1000) ? 1 : 2;
   }
 
   private setGrossIncome(value: string) {
@@ -62,7 +76,8 @@ export class AppComponent implements OnInit {
         series: BY_MOVIE.series,
         xaxis: BY_MOVIE.xaxis,
         yaxis: GROSS_INCOME.yaxis,
-        legend: GROSS_INCOME.legend 
+        legend: GROSS_INCOME.legend,
+        responsive: GROSS_INCOME.responsive
       };
     } else {
       this.grossIncome = {
@@ -74,7 +89,8 @@ export class AppComponent implements OnInit {
         series: BY_YEAR.series,
         xaxis: BY_YEAR.xaxis,
         yaxis: GROSS_INCOME.yaxis,
-        legend: GROSS_INCOME.legend
+        legend: GROSS_INCOME.legend,
+        responsive: GROSS_INCOME.responsive
       };
     }
     this.grossIncomeTitle = GROSS_INCOME_TITLE;
@@ -93,7 +109,8 @@ export class AppComponent implements OnInit {
         grid: PROFITS.grid,
         series: BY_REVENUE.series,
         xaxis: PROFITS.xaxis,
-        yaxis: BY_REVENUE.yaxis
+        yaxis: BY_REVENUE.yaxis,
+        responsive: PROFITS.responsive
       };
     } else {
       this.profits = {
@@ -104,7 +121,8 @@ export class AppComponent implements OnInit {
         grid: PROFITS.grid,
         series: BY_PERCENTAGE.series,
         xaxis: PROFITS.xaxis,
-        yaxis: BY_PERCENTAGE.yaxis
+        yaxis: BY_PERCENTAGE.yaxis,
+        responsive: PROFITS.responsive
       };
     }
     this.profitsTitle = PROFITS_TITLE;
