@@ -22,6 +22,13 @@ import {
   PHASE_2,
   PHASE_3
 } from './data/ratings-per-phase';
+import {
+  CHARACTERS_CORR_TITLE,
+  CHARACTERS_CORR_DESCRIPTION,
+  CHARACTERS_CORR,
+  BY_INCOME,
+  BY_RATING
+} from './data/characters-corr';
 
 @Component({
   selector: 'app-root',
@@ -57,6 +64,12 @@ export class AppComponent implements OnInit {
   phaseTwoToggle: any;
   phaseThreeToggle: any;
 
+  charactersCorr: any;
+  charactersCorrTitle: string;
+  charactersCorrDescription: string;
+  byIncomeToggle: any;
+  byRatingToggle: any;
+
   ngOnInit() {
     this.title = 'Marvel Cinematic Universe';
     this.shortTitle = 'MCU';
@@ -66,6 +79,7 @@ export class AppComponent implements OnInit {
     this.setGrossIncome(BY_MOVIE.toggle.value);
     this.setProfits(BY_REVENUE.toggle.value);
     this.setRatingsPerPhase(PHASE_1.toggle.value);
+    this.setCharactersCorrelation(BY_INCOME.toggle.value);
   }
 
   onResize(event: Event) {
@@ -82,6 +96,10 @@ export class AppComponent implements OnInit {
 
   onPhasesToggleClicked(value: string) {
     this.setRatingsPerPhase(value);
+  }
+
+  onCharactersCorrelationToggleClicked(value: string) {
+    this.setCharactersCorrelation(value);
   }
 
   private resize() {
@@ -235,6 +253,38 @@ export class AppComponent implements OnInit {
     this.phaseOneToggle = PHASE_1.toggle;
     this.phaseTwoToggle = PHASE_2.toggle;
     this.phaseThreeToggle = PHASE_3.toggle;
+  }
+
+  private setCharactersCorrelation(value: string) {
+    if (value === BY_INCOME.toggle.value) {
+      this.charactersCorr = {
+        title: BY_INCOME.title,
+        chart: CHARACTERS_CORR.chart,
+        dataLabels: CHARACTERS_CORR.dataLabels,
+        grid: CHARACTERS_CORR.grid,
+        series: BY_INCOME.series,
+        xaxis: CHARACTERS_CORR.xaxis,
+        yaxis: BY_INCOME.yaxis,
+        legend: CHARACTERS_CORR.legend,
+        responsive: CHARACTERS_CORR.responsive
+      };
+    } else {
+      this.charactersCorr = {
+        title: BY_RATING.title,
+        chart: CHARACTERS_CORR.chart,
+        dataLabels: CHARACTERS_CORR.dataLabels,
+        grid: CHARACTERS_CORR.grid,
+        series: BY_RATING.series,
+        xaxis: CHARACTERS_CORR.xaxis,
+        yaxis: BY_RATING.yaxis,
+        legend: CHARACTERS_CORR.legend,
+        responsive: CHARACTERS_CORR.responsive
+      };
+    }
+    this.charactersCorrTitle = CHARACTERS_CORR_TITLE;
+    this.charactersCorrDescription = CHARACTERS_CORR_DESCRIPTION;
+    this.byIncomeToggle = BY_INCOME.toggle;
+    this.byRatingToggle = BY_RATING.toggle;
   }
 
 }

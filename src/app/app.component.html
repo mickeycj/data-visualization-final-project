@@ -99,11 +99,31 @@
   </mat-grid-tile>
   <mat-grid-tile *ngIf="!isSmall">
     <app-description side="left"
-                     [title]="'Title 4'"
-                     [description]="'Description 4'"></app-description>
+                     [title]="charactersCorrTitle"
+                     [description]="charactersCorrDescription"></app-description>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="chartColSpan">
-    4
+    <mat-grid-list cols="1">
+      <mat-button-toggle-group id="characters-corr-toggle" [value]="byIncomeToggle.value">
+        <mat-button-toggle [value]="byIncomeToggle.value"
+                           (change)="onCharactersCorrelationToggleClicked($event.value)">
+          <span>{{ byIncomeToggle.title }}</span>
+        </mat-button-toggle>
+        <mat-button-toggle [value]="byRatingToggle.value"
+                           (change)="onCharactersCorrelationToggleClicked($event.value)">
+          <span>{{ byRatingToggle.title }}</span>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+      <apx-chart [title]="charactersCorr.title"
+                 [chart]="charactersCorr.chart"
+                 [dataLabels]="charactersCorr.dataLabels"
+                 [grid]="charactersCorr.grid"
+                 [series]="charactersCorr.series"
+                 [xaxis]="charactersCorr.xaxis"
+                 [yaxis]="charactersCorr.yaxis"
+                 [legend]="charactersCorr.legend"
+                 [responsive]="charactersCorr.responsive"></apx-chart>
+    </mat-grid-list>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="chartColSpan">
     5
