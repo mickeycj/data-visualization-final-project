@@ -9,7 +9,7 @@ export const PROFITS_DESCRIPTION = `
 
 export const PROFITS = {
   title: {
-    text: 'Profits and Losses',
+    text: 'Profits',
     style: {
       fontSize: '28px'
     }
@@ -141,7 +141,7 @@ export const BY_REVENUE = {
   },
   series: [
     {
-      name: 'Profit/Loss',
+      name: 'Profit',
       type: 'column',
       data: [
         445174222,
@@ -171,7 +171,7 @@ export const BY_REVENUE = {
   ],
   yaxis: {
     title: {
-      text: 'Profit/Loss ($)',
+      text: 'Profit ($)',
       style: {
         fontSize: '28px'
       }
@@ -200,7 +200,7 @@ export const BY_PERCENTAGE = {
   },
   series: [
     {
-      name: 'Profit/Loss',
+      name: 'Profit',
       type: 'column',
       data: [
         317.98,
@@ -230,7 +230,7 @@ export const BY_PERCENTAGE = {
   ],
   yaxis: {
     title: {
-      text: 'Profit/Loss (%)',
+      text: 'Profit (%)',
       style: {
         fontSize: '28px'
       }

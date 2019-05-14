@@ -13,7 +13,7 @@ import {
   PROFITS,
   BY_REVENUE,
   BY_PERCENTAGE
-} from './data/profits-and-losses';
+} from './data/profits';
 import {
   RATINGS_PER_PHASE_TITLE,
   RATINGS_PER_PHASE_DESCRIPTION,
