@@ -1,6 +1,7 @@
 <app-header [title]="(isSmall) ? shortTitle : title"></app-header>
 
-<mat-grid-list [cols]="cols" rowHeight="{{(isSmall) ? '500px' : '720px'}}" (window:resize)="onResize($event)">
+<mat-grid-list [cols]="cols" rowHeight="{{(isSmall) ? '500px' : '720px'}}"
+               (window:resize)="onResize($event)">
   <mat-grid-tile [colspan]="chartColSpan">
     <mat-grid-list cols="1">
       <mat-button-toggle-group id="gross-income-toggle" [value]="byMovieToggle.value">
@@ -47,8 +48,7 @@
           <span>{{ byPercentageToggle.title }}</span>
         </mat-button-toggle>
       </mat-button-toggle-group>
-      <apx-chart id="profits-chart"
-                 [title]="profits.title"
+      <apx-chart [title]="profits.title"
                  [chart]="profits.chart"
                  [dataLabels]="profits.dataLabels"
                  [stroke]="profits.stroke"
@@ -60,12 +60,42 @@
     </mat-grid-list>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="chartColSpan">
-    3
+    <div class="grid-container">
+      <mat-button-toggle-group id="ratings-toggle" [value]="phaseOneToggle.value">
+        <mat-button-toggle [value]="phaseOneToggle.value"
+                           (change)="onPhasesToggleClicked($event.value)">
+          <span>{{ phaseOneToggle.title }}</span>
+        </mat-button-toggle>
+        <mat-button-toggle [value]="phaseTwoToggle.value"
+                           (change)="onPhasesToggleClicked($event.value)">
+          <span>{{ phaseTwoToggle.title }}</span>
+        </mat-button-toggle>
+        <mat-button-toggle [value]="phaseThreeToggle.value"
+                           (change)="onPhasesToggleClicked($event.value)">
+          <span>{{ phaseThreeToggle.title }}</span>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+      <apx-chart id="income-chart"
+                 [title]="ratingsPerPhaseIncome.title"
+                 [chart]="ratingsPerPhaseIncome.chart"
+                 [labels]="ratingsPerPhaseIncome.labels"
+                 [series]="ratingsPerPhaseIncome.series"
+                 [yaxis]="ratingsPerPhaseIncome.yaxis"
+                 [legend]="ratingsPerPhaseIncome.legend"></apx-chart>
+      <apx-chart id="rating-chart"
+                 [title]="ratingsPerPhaseRating.title"
+                 [chart]="ratingsPerPhaseRating.chart"
+                 [plotOptions]="ratingsPerPhaseRating.plotOptions"
+                 [fill]="ratingsPerPhaseRating.fill"
+                 [stroke]="ratingsPerPhaseRating.stroke"
+                 [labels]="ratingsPerPhaseRating.labels"
+                 [series]="ratingsPerPhaseRating.series"></apx-chart>
+    </div>
   </mat-grid-tile>
   <mat-grid-tile *ngIf="!isSmall">
     <app-description side="right"
-                     [title]="'Title 3'"
-                     [description]="'Description 3'"></app-description>
+                     [title]="ratingsPerPhaseTitle"
+                     [description]="ratingsPerPhaseDescription"></app-description>
   </mat-grid-tile>
   <mat-grid-tile *ngIf="!isSmall">
     <app-description side="left"

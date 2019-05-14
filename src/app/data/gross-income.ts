@@ -120,7 +120,7 @@ export const BY_MOVIE = {
     text: 'Gross Income by Movie',
     align: 'left',
     style: {
-      fontSize: '28px'
+      fontSize: '20px'
     }
   },
   series: [
@@ -249,7 +249,7 @@ export const BY_YEAR = {
     text: 'Gross Income by Year',
     align: 'left',
     style: {
-      fontSize: '28px'
+      fontSize: '20px'
     }
   },
   series: [

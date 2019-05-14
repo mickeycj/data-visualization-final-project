@@ -16,6 +16,21 @@
 #profits-toggle {
   margin: 40px 0 20px;
 }
-#profits-chart {
-  margin-top: 40px;
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'toggle toggle'
+    'income rating';
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+#ratings-toggle {
+  grid-area: toggle;
+}
+#income-chart {
+  grid-area: income; 
+}
+#rating-chart {
+  grid-area: rating;
 }

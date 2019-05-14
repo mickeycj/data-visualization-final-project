@@ -11,7 +11,7 @@ export const PROFITS = {
   title: {
     text: 'Profits and Losses',
     style: {
-      fontSize: '28px'
+      fontSize: '20px'
     }
   },
   chart: {
