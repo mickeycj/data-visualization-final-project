@@ -29,6 +29,13 @@ import {
   BY_INCOME,
   BY_RATING
 } from './data/characters-corr';
+import {
+  POPULARITY_TITLE,
+  POPULARITY_DESCRIPTION,
+  POPULARITY,
+  BY_GROSS_INCOME,
+  BY_AVG_RATING
+} from './data/popularity';
 
 @Component({
   selector: 'app-root',
@@ -70,6 +77,12 @@ export class AppComponent implements OnInit {
   byIncomeToggle: any;
   byRatingToggle: any;
 
+  popularity: any;
+  popularityTitle: string;
+  popularityDescription: string;
+  byGrossIncomeToggle: any;
+  byAvgRatingToggle: any;
+
   ngOnInit() {
     this.title = 'Marvel Cinematic Universe';
     this.shortTitle = 'MCU';
@@ -80,6 +93,7 @@ export class AppComponent implements OnInit {
     this.setProfits(BY_REVENUE.toggle.value);
     this.setRatingsPerPhase(PHASE_1.toggle.value);
     this.setCharactersCorrelation(BY_INCOME.toggle.value);
+    this.setPopularity(BY_GROSS_INCOME.toggle.value);
   }
 
   onResize(event: Event) {
@@ -100,6 +114,10 @@ export class AppComponent implements OnInit {
 
   onCharactersCorrelationToggleClicked(value: string) {
     this.setCharactersCorrelation(value);
+  }
+
+  onPopularityToggleClicked(value: string) {
+    this.setPopularity(value);
   }
 
   private resize() {
@@ -285,6 +303,38 @@ export class AppComponent implements OnInit {
     this.charactersCorrDescription = CHARACTERS_CORR_DESCRIPTION;
     this.byIncomeToggle = BY_INCOME.toggle;
     this.byRatingToggle = BY_RATING.toggle;
+  }
+
+  private setPopularity(value: string) {
+    if(value === BY_GROSS_INCOME.toggle.value) {
+      this.popularity = {
+        title: BY_GROSS_INCOME.title,
+        chart: POPULARITY.chart,
+        plotOptions: POPULARITY.plotOptions,
+        dataLabels: POPULARITY.dataLabels,
+        grid: POPULARITY.grid,
+        series: BY_GROSS_INCOME.series,
+        xaxis: POPULARITY.xaxis,
+        yaxis: BY_GROSS_INCOME.yaxis,
+        responsive: POPULARITY.responsive
+      };
+    } else {
+      this.popularity = {
+        title: BY_AVG_RATING.title,
+        chart: POPULARITY.chart,
+        plotOptions: POPULARITY.plotOptions,
+        dataLabels: POPULARITY.dataLabels,
+        grid: POPULARITY.grid,
+        series: BY_AVG_RATING.series,
+        xaxis: POPULARITY.xaxis,
+        yaxis: BY_AVG_RATING.yaxis,
+        responsive: POPULARITY.responsive
+      };
+    }
+    this.popularityTitle = POPULARITY_TITLE;
+    this.popularityDescription = POPULARITY_DESCRIPTION;
+    this.byGrossIncomeToggle = BY_GROSS_INCOME.toggle;
+    this.byAvgRatingToggle = BY_AVG_RATING.toggle;
   }
 
 }

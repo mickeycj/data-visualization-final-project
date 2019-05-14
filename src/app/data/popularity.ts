@@ -1,20 +1,27 @@
-export const CHARACTERS_CORR_TITLE = 'Do people go for the big name superheroes?';
+export const POPULARITY_TITLE = 'Popularity among Marvel superheroes';
 
-export const CHARACTERS_CORR_DESCRIPTION = `
-  At first, not many people were aware of the existence of many of Marvel characters, excluding
-  the fans themselves. People tend to be excited for team-up films more than others, including
-  solo films that include other heroes in the advertising materials. 
+export const POPULARITY_DESCRIPTION = `
+  Many actors are part of the MCU, such as Robert Downey Jr., Chris Evans and many more. They
+  have been integral to the success of the franchise. However, are their popularity among the fans,
+  casual or hardcore alike, reflected on papers? Let's take a look at the amount of revenues these
+  actors and their corresponding characters as well as their popularity among the critics.
 `;
 
-export const CHARACTERS_CORR = {
+export const POPULARITY = {
   chart: {
     height: 500,
     width: 1050,
     fontFamily: 'Marvel, arial, sans-serif',
     foreColor: '#1A1A64',
-    type: 'scatter',
+    type: 'bar',
     zoom: {
       enabled: false
+    }
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '45%',
+      distributed: true
     }
   },
   dataLabels: {
@@ -28,26 +35,28 @@ export const CHARACTERS_CORR = {
   },
   xaxis: {
     title: {
-      text: 'Number of Characters',
+      text: 'Characters',
       style: {
         fontSize: '28px'
       }
     },
-    tickAmount: 27,
+    categories: [
+      'Iron Man',
+      'The Incredible Hulk',
+      'Thor',
+      'Captain America',
+      'Guardians of the Galaxy',
+      'Ant-Man',
+      'Doctor Strange',
+      'Spider-Man',
+      'Black Panther',
+      'Captain Marvel'
+    ],
     labels: {
-      formatter: (value: number) => {
-        return Math.ceil(value);
-      },
       style: {
         fontSize: '16px'
       }
     }
-  },
-  legend: {
-    position: 'top',
-    horizontalAlign: 'right',
-    offsetY: -24,
-    fontSize: '16px'
   },
   responsive: [
     {
@@ -110,13 +119,13 @@ export const CHARACTERS_CORR = {
   ]
 };
 
-export const BY_INCOME = {
+export const BY_GROSS_INCOME = {
   toggle: {
     title: 'By income',
     value: 'by-income'
   },
   title: {
-    text: 'Correlation between Number of Key Characters and Gross Income',
+    text: 'Popularity by Gross Income',
     align: 'left',
     style: {
       fontSize: '28px'
@@ -124,35 +133,18 @@ export const BY_INCOME = {
   },
   series: [
     {
-      name: 'Solo',
+      name: 'Gross Income',
       data: [
-        [1, 585174222],
-        [1, 263427551],
-        [4, 623933331],
-        [2, 449326618],
-        [2, 370569774],
-        [2, 1214811252],
-        [2, 644571402],
-        [5, 714264267],
-        [7, 773328629],
-        [2, 519311965],
-        [1, 677718395],
-        [8, 863756051],
-        [2, 880166924],
-        [4, 853977126],
-        [1, 1346913161],
-        [2, 622674139],
-        [2, 1123169767],
-      ]
-    },
-    {
-      name: 'Team-up',
-      data: [
-        [8, 1518812988],
-        [11, 1405403694],
-        [12, 1153304495],
-        [23, 2048359754],
-        [27, 2485499739]
+        2423918805,
+        263427551,
+        1947875146,
+        2238138536,
+        1637084680,
+        1141986104,
+        677718395,
+        880166924,
+        1346913161,
+        1124614676
       ]
     }
   ],
@@ -180,13 +172,13 @@ export const BY_INCOME = {
   }
 };
 
-export const BY_RATING = {
+export const BY_AVG_RATING = {
   toggle: {
-    title: 'By ratings',
-    value: 'by-ratings'
+    title: 'By rating',
+    value: 'by-rating'
   },
   title: {
-    text: 'Correlation between Number of Key Characters and Ratings',
+    text: 'Popularity by Average Ratings',
     align: 'left',
     style: {
       fontSize: '28px'
@@ -194,50 +186,31 @@ export const BY_RATING = {
   },
   series: [
     {
-      name: 'Solo',
+      name: 'Rating',
       data: [
-        [1, 93],
-        [1, 67],
-        [4, 73],
-        [2, 77],
-        [2, 80],
-        [2, 79],
-        [2, 66],
-        [5, 90],
-        [7, 91],
-        [2, 82],
-        [1, 89],
-        [8, 84],
-        [2, 92],
-        [4, 93],
-        [1, 97],
-        [2, 88],
-        [2, 78],
-      ]
-    },
-    {
-      name: 'Team-up',
-      data: [
-        [8, 92],
-        [11, 75],
-        [12, 91],
-        [23, 85],
-        [27, 95]
+        81.7,
+        67.0,
+        78.7,
+        87.0,
+        87.5,
+        85.0,
+        89.0,
+        92.0,
+        97.0,
+        78.0
       ]
     }
   ],
   yaxis: {
     title: {
-      text: 'Rotten Tomatoes (%)',
+      text: 'Rating (%)',
       style: {
         fontSize: '28px'
       }
     },
-    min: 60,
-    max: 100,
     labels: {
       formatter: (value: number) => {
-        return `${value} %`;
+        return `${value.toFixed(1)} %`;
       },
       style: {
         fontSize: '16px'
