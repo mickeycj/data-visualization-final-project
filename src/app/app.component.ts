@@ -23,9 +23,11 @@ import {
 export class AppComponent implements OnInit {
 
   title: string;
+  shortTitle: string;
 
-  cols: number
-  chartColSpan: number
+  isSmall: boolean;
+  cols: number;
+  chartColSpan: number;
 
   grossIncome: any;
   grossIncomeTitle: string;
@@ -40,16 +42,17 @@ export class AppComponent implements OnInit {
   byPercentageToggle: any;
 
   ngOnInit() {
-    this.title = "Marvel Cinematic Universe";
+    this.title = 'Marvel Cinematic Universe';
+    this.shortTitle = 'MCU';
 
-    this.setColSpan();
+    this.resize();
 
-    this.setGrossIncome('by-movie');
-    this.setProfits('by-revenue');
+    this.setGrossIncome(BY_MOVIE.toggle.value);
+    this.setProfits(BY_REVENUE.toggle.value);
   }
 
-  onResize(event) {
-    this.setColSpan();
+  onResize(event: Event) {
+    this.resize();
   }
 
   onGrossIncomeToggleClicked(value: string) {
@@ -57,10 +60,11 @@ export class AppComponent implements OnInit {
   }
 
   onProfitsToggleClicked(value: string) {
-    this.setProfits(value)
+    this.setProfits(value);
   }
 
-  private setColSpan() {
+  private resize() {
+    this.isSmall = window.innerWidth < 1000;
     this.cols = (window.innerWidth < 1000) ? 1 : 3;
     this.chartColSpan = (window.innerWidth < 1000) ? 1 : 2;
   }

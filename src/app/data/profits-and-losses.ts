@@ -9,7 +9,10 @@ export const PROFITS_DESCRIPTION = `
 
 export const PROFITS = {
   title: {
-    text: 'Profits and Losses'
+    text: 'Profits and Losses',
+    style: {
+      fontSize: '28px'
+    }
   },
   chart: {
     height: 600,
@@ -33,7 +36,10 @@ export const PROFITS = {
   },
   xaxis: {
     title: {
-      text: 'Movie'
+      text: 'Movie',
+      style: {
+        fontSize: '20px'
+      }
     },
     categories: [
       'Iron Man',
@@ -64,7 +70,7 @@ export const PROFITS = {
     {
       breakpoint: 1600,
       options: {
-          chart: {
+        chart: {
           width: 900
         }
       }
@@ -158,7 +164,10 @@ export const BY_REVENUE = {
   ],
   yaxis: {
     title: {
-      text: 'Profit/Loss ($)'
+      text: 'Profit/Loss ($)',
+      style: {
+        fontSize: '20px'
+      }
     },
     labels: {
       formatter: (value: number) => {
@@ -211,7 +220,10 @@ export const BY_PERCENTAGE = {
   ],
   yaxis: {
     title: {
-      text: 'Profit/Loss (%)'
+      text: 'Profit/Loss (%)',
+      style: {
+        fontSize: '20px'
+      }
     },
     labels: {
       formatter: (value: number) => {

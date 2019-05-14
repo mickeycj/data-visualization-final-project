@@ -29,7 +29,10 @@ export const GROSS_INCOME = {
   },
   yaxis: {
     title: {
-      text: 'Gross Income ($)'
+      text: 'Gross Income ($)',
+      style: {
+        fontSize: '20px'
+      }
     },
     labels: {
       formatter: (value: number) => {
@@ -44,13 +47,14 @@ export const GROSS_INCOME = {
     }
   },
   legend: {
-    position: 'top'
+    position: 'top',
+    offsetY: -24
   },
   responsive: [
     {
       breakpoint: 1600,
       options: {
-          chart: {
+        chart: {
           width: 900
         }
       }
@@ -111,6 +115,13 @@ export const BY_MOVIE = {
   toggle: {
     title: 'By movie',
     value: 'by-movie'
+  },
+  title: {
+    text: 'Gross Income by Movie',
+    align: 'left',
+    style: {
+      fontSize: '28px'
+    }
   },
   series: [
     {
@@ -195,13 +206,12 @@ export const BY_MOVIE = {
       ]
     }
   ],
-  title: {
-    text: 'Gross Income by Movie',
-    align: 'left'
-  },
   xaxis: {
     title: {
-      text: 'Movie'
+      text: 'Movie',
+      style: {
+        fontSize: '20px'
+      }
     },
     categories: [
       'Iron Man',
@@ -234,6 +244,13 @@ export const BY_YEAR = {
   toggle: {
     title: 'By year',
     value: 'by-year'
+  },
+  title: {
+    text: 'Gross Income by Year',
+    align: 'left',
+    style: {
+      fontSize: '28px'
+    }
   },
   series: [
     {
@@ -288,13 +305,12 @@ export const BY_YEAR = {
       ]
     }
   ],
-  title: {
-    text: 'Gross Income by Year',
-    align: 'left'
-  },
   xaxis: {
     title: {
-      text: 'Year'
+      text: 'Year',
+      style: {
+        fontSize: '20px'
+      }
     },
     categories: [
       '2008',

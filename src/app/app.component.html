@@ -1,8 +1,8 @@
-<app-header [title]="title"></app-header>
+<app-header [title]="(isSmall) ? shortTitle : title"></app-header>
 
-<mat-grid-list [cols]="cols" rows="6" rowHeight="720px" (window:resize)="onResize($event)">
+<mat-grid-list [cols]="cols" rowHeight="{{(isSmall) ? '500px' : '720px'}}" (window:resize)="onResize($event)">
   <mat-grid-tile [colspan]="chartColSpan">
-    <mat-grid-list cols="1" rows="2">
+    <mat-grid-list cols="1">
       <mat-button-toggle-group id="gross-income-toggle" [value]="byMovieToggle.value">
         <mat-button-toggle [value]="byMovieToggle.value"
                            (change)="onGrossIncomeToggleClicked($event.value)">
@@ -25,18 +25,18 @@
                  [responsive]="grossIncome.responsive"></apx-chart>
     </mat-grid-list>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile *ngIf="!isSmall">
     <app-description side="right"
                      [title]="grossIncomeTitle"
                      [description]="grossIncomeDescription"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile *ngIf="!isSmall">
     <app-description side="left"
                      [title]="profitsTitle"
                      [description]="profitsDescription"></app-description>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="chartColSpan">
-    <mat-grid-list cols="1" row="2">
+    <mat-grid-list cols="1">
       <mat-button-toggle-group id="profits-toggle" [value]="byRevenueToggle.value">
         <mat-button-toggle [value]="byRevenueToggle.value"
                             (change)="onProfitsToggleClicked($event.value)">
@@ -59,30 +59,38 @@
                  [responsive]="profits.responsive"></apx-chart>
     </mat-grid-list>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="chartColSpan">3</mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">
+    3
+  </mat-grid-tile>
+  <mat-grid-tile *ngIf="!isSmall">
     <app-description side="right"
-                      [title]="'Title 3'"
-                      [description]="'Description 3'"></app-description>
+                     [title]="'Title 3'"
+                     [description]="'Description 3'"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile *ngIf="!isSmall">
     <app-description side="left"
-                      [title]="'Title 4'"
-                      [description]="'Description 4'"></app-description>
+                     [title]="'Title 4'"
+                     [description]="'Description 4'"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="chartColSpan">4</mat-grid-tile>
-  <mat-grid-tile [colspan]="chartColSpan">5</mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">
+    4
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">
+    5
+  </mat-grid-tile>
+  <mat-grid-tile *ngIf="!isSmall">
     <app-description side="right"
-                      [title]="'Title 5'"
-                      [description]="'Description 5'"></app-description>
+                     [title]="'Title 5'"
+                     [description]="'Description 5'"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile *ngIf="!isSmall">
     <app-description side="left"
-                      [title]="'Title 6'"
-                      [description]="'Description 6'"></app-description>
+                    [title]="'Title 6'"
+                    [description]="'Description 6'"></app-description>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="chartColSpan">6</mat-grid-tile>
+  <mat-grid-tile [colspan]="chartColSpan">
+    6
+  </mat-grid-tile>
 </mat-grid-list>
 
 <app-footer></app-footer>
