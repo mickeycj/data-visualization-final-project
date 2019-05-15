@@ -29,6 +29,11 @@ export const GROSS_INCOME = {
       opacity: 0.5
     }
   },
+  colors: [
+    '#2C2A89',
+    '#7B6FDE',
+    '#9D6617'
+  ],
   yaxis: {
     title: {
       text: 'Gross Income ($)',

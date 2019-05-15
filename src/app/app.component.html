@@ -19,6 +19,7 @@
                  [dataLabels]="grossIncome.dataLabels"
                  [stroke]="grossIncome.stroke"
                  [grid]="grossIncome.grid"
+                 [colors]="grossIncome.colors"
                  [series]="grossIncome.series"
                  [xaxis]="grossIncome.xaxis"
                  [yaxis]="grossIncome.yaxis"
@@ -53,6 +54,7 @@
                  [dataLabels]="profits.dataLabels"
                  [stroke]="profits.stroke"
                  [grid]="profits.grid"
+                 [colors]="profits.colors"
                  [series]="profits.series"
                  [xaxis]="profits.xaxis"
                  [yaxis]="profits.yaxis"
@@ -78,6 +80,7 @@
       <apx-chart id="income-chart"
                  [title]="ratingsPerPhaseIncome.title"
                  [chart]="ratingsPerPhaseIncome.chart"
+                 [colors]="ratingsPerPhaseIncome.colors"
                  [labels]="ratingsPerPhaseIncome.labels"
                  [series]="ratingsPerPhaseIncome.series"
                  [yaxis]="ratingsPerPhaseIncome.yaxis"
@@ -89,7 +92,8 @@
                  [fill]="ratingsPerPhaseRating.fill"
                  [stroke]="ratingsPerPhaseRating.stroke"
                  [labels]="ratingsPerPhaseRating.labels"
-                 [series]="ratingsPerPhaseRating.series"></apx-chart>
+                 [series]="ratingsPerPhaseRating.series"
+                 [xaxis]="ratingsPerPhaseRating.xaxis"></apx-chart>
     </div>
   </mat-grid-tile>
   <mat-grid-tile *ngIf="!isSmall">
@@ -118,6 +122,7 @@
                  [chart]="charactersCorr.chart"
                  [dataLabels]="charactersCorr.dataLabels"
                  [grid]="charactersCorr.grid"
+                 [colors]="charactersCorr.colors"
                  [series]="charactersCorr.series"
                  [xaxis]="charactersCorr.xaxis"
                  [yaxis]="charactersCorr.yaxis"
@@ -142,6 +147,7 @@
                  [plotOptions]="popularity.plotOptions"
                  [dataLabels]="popularity.dataLabels"
                  [grid]="popularity.grid"
+                 [colors]="popularity.colors"
                  [series]="popularity.series"
                  [xaxis]="popularity.xaxis"
                  [yaxis]="popularity.yaxis"

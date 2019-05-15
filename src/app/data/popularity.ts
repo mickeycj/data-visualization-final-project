@@ -33,6 +33,18 @@ export const POPULARITY = {
       opacity: 0.5
     }
   },
+  colors: [
+    '#AA0505',
+    '#A2DC48',
+    '#A8A9AD',
+    '#000042',
+    '#3870BD',
+    '#9D152C',
+    '#454253',
+    '#B11313',
+    '#080808',
+    '#CC4224'
+  ],
   xaxis: {
     title: {
       text: 'Characters',

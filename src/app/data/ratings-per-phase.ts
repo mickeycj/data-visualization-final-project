@@ -112,6 +112,14 @@ export const PHASE_1 = {
     'Captain America: The First Avenger',
     'The Incredible Hulk'
   ],
+  pieColors: [
+    '#5C49C6',
+    '#AA0505',
+    '#6A0C0B',
+    '#A8A9AD',
+    '#000042',
+    '#A2DC48'
+  ],
   pieSeries: [
     1518812988,
     623933331,
@@ -142,6 +150,14 @@ export const PHASE_2 = {
     'Captain America: The Winter Soldier',
     'Thor: The Dark World',
     'Ant-Man'
+  ],
+  pieColors: [
+    '#453AA4',
+    '#AA0505',
+    '#3670BD',
+    '#000042',
+    '#A8A9AD',
+    '#9D152C'
   ],
   pieSeries: [
     1405403694,
@@ -177,6 +193,18 @@ export const PHASE_3 = {
     'Thor: Ragnaork',
     'Doctor Strange',
     'Ant-Man and the Wasp',
+  ],
+  pieColors: [
+    '#2C2A89',
+    '#B87328',
+    '#080808',
+    '#000042',
+    '#CC4224',
+    '#B11313',
+    '#3870BD',
+    '#A8A9AD',
+    '#454253',
+    '#9D152C'
   ],
   pieSeries: [
     2503147735,

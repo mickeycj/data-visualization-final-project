@@ -26,6 +26,10 @@ export const CHARACTERS_CORR = {
       opacity: 0.5
     }
   },
+  colors: [
+    '#9D6617',
+    '#7B6FDE'
+  ],
   xaxis: {
     title: {
       text: 'Number of Characters',

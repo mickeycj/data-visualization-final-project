@@ -36,6 +36,7 @@ export const PROFITS = {
       opacity: 0.5
     }
   },
+  colors: ['#7B6FDE'],
   xaxis: {
     title: {
       text: 'Movie',
