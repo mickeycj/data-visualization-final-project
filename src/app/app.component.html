@@ -62,7 +62,7 @@
     </mat-grid-list>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="chartColSpan">
-    <div class="grid-container">
+    <div [class]="(isSmall) ? 'grid-container-small' : 'grid-container'">
       <mat-button-toggle-group id="ratings-toggle" [value]="phaseOneToggle.value">
         <mat-button-toggle [value]="phaseOneToggle.value"
                            (change)="onPhasesToggleClicked($event.value)">
@@ -85,7 +85,8 @@
                  [series]="ratingsPerPhaseIncome.series"
                  [yaxis]="ratingsPerPhaseIncome.yaxis"
                  [legend]="ratingsPerPhaseIncome.legend"></apx-chart>
-      <apx-chart id="rating-chart"
+      <apx-chart *ngIf="!isSmall"
+                 id="rating-chart"
                  [title]="ratingsPerPhaseRating.title"
                  [chart]="ratingsPerPhaseRating.chart"
                  [plotOptions]="ratingsPerPhaseRating.plotOptions"
