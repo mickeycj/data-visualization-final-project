@@ -190,7 +190,7 @@ export const BY_AVG_RATING = {
     value: 'by-rating'
   },
   title: {
-    text: 'Popularity by Average Ratings',
+    text: 'Popularity by Average Rating',
     align: 'left',
     style: {
       fontSize: '28px'
