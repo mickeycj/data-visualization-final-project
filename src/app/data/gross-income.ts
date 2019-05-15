@@ -242,7 +242,7 @@ export const BY_MOVIE = {
       'Ant-Man',
       'Captain America: Civil War',
       'Doctor Strange',
-      'Guardian of the Galaxy Vol.2',
+      'Guardians of the Galaxy Vol.2',
       'Spider-Man: Homecoming',
       'Thor: Ragnaork',
       'Black Panther',

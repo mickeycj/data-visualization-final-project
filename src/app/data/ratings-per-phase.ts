@@ -189,7 +189,7 @@ export const PHASE_3 = {
     'Captain America: Civil War',
     'Captain Marvel',
     'Spider-Man: Homecoming',
-    'Guardian of the Galaxy Vol.2',
+    'Guardians of the Galaxy Vol.2',
     'Thor: Ragnaork',
     'Doctor Strange',
     'Ant-Man and the Wasp',
