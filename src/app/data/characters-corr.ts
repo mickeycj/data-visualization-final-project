@@ -182,8 +182,8 @@ export const BY_INCOME = {
 
 export const BY_RATING = {
   toggle: {
-    title: 'By ratings',
-    value: 'by-ratings'
+    title: 'By rating',
+    value: 'by-rating'
   },
   title: {
     text: 'Correlation between Number of Key Characters and Ratings',
