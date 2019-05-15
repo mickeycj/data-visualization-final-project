@@ -47,7 +47,7 @@ export const POPULARITY = {
   ],
   xaxis: {
     title: {
-      text: 'Characters',
+      text: 'Character',
       style: {
         fontSize: '28px'
       }
