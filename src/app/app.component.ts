@@ -36,6 +36,11 @@ import {
   BY_GROSS_INCOME,
   BY_AVG_RATING
 } from './data/popularity';
+import {
+  ENDGAME_INCOME_TITLE,
+  ENDGAME_INCOME_DESCRIPTION,
+  ENDGAME_INCOME
+} from './data/endgame-income';
 
 @Component({
   selector: 'app-root',
@@ -83,6 +88,12 @@ export class AppComponent implements OnInit {
   byGrossIncomeToggle: any;
   byAvgRatingToggle: any;
 
+  endgameIncome: any;
+  endgameIncomeTitle: string;
+  endgameIncomeDescription: string;
+  endgameIncomeHeight: number;
+  endgameIncomeWidth: number;
+
   ngOnInit() {
     this.title = 'Marvel Cinematic Universe';
     this.shortTitle = 'MCU';
@@ -94,6 +105,7 @@ export class AppComponent implements OnInit {
     this.setRatingsPerPhase(PHASE_1.toggle.value);
     this.setCharactersCorrelation(BY_INCOME.toggle.value);
     this.setPopularity(BY_GROSS_INCOME.toggle.value);
+    this.setEndgameIncome();
   }
 
   onResize(event: Event) {
@@ -121,9 +133,27 @@ export class AppComponent implements OnInit {
   }
 
   private resize() {
-    this.isSmall = window.innerWidth < 1000;
-    this.cols = (window.innerWidth < 1000) ? 1 : 3;
-    this.chartColSpan = (window.innerWidth < 1000) ? 1 : 2;
+    const innerWidth = window.innerWidth;
+
+    this.isSmall = innerWidth < 1000;
+    this.cols = (innerWidth < 1000) ? 1 : 3;
+    this.chartColSpan = (innerWidth < 1000) ? 1 : 2;
+    if (innerWidth >= 1600) {
+      this.endgameIncomeHeight = 500;
+      this.endgameIncomeWidth = 900;
+    } else if (innerWidth >= 1400) {
+      this.endgameIncomeHeight = 500;
+      this.endgameIncomeWidth = 750;
+    } else if (innerWidth >= 1150) {
+      this.endgameIncomeHeight = 500;
+      this.endgameIncomeWidth = 600;
+    } else if (innerWidth >= 500) {
+      this.endgameIncomeHeight = 500;
+      this.endgameIncomeWidth = 450;      
+    } else {
+      this.endgameIncomeHeight = 400
+      this.endgameIncomeWidth = 350;      
+    }
   }
 
   private setGrossIncome(value: string) {
@@ -335,6 +365,17 @@ export class AppComponent implements OnInit {
     this.popularityDescription = POPULARITY_DESCRIPTION;
     this.byGrossIncomeToggle = BY_GROSS_INCOME.toggle;
     this.byAvgRatingToggle = BY_AVG_RATING.toggle;
+  }
+
+  private setEndgameIncome() {
+    this.endgameIncome = {
+      type: ENDGAME_INCOME.type,
+      options: ENDGAME_INCOME.options,
+      columnNames: ENDGAME_INCOME.columnNames,
+      data: ENDGAME_INCOME.data
+    };
+    this.endgameIncomeTitle = ENDGAME_INCOME_TITLE;
+    this.endgameIncomeDescription = ENDGAME_INCOME_DESCRIPTION;
   }
 
 }

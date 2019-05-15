@@ -155,11 +155,15 @@
   </mat-grid-tile>
   <mat-grid-tile *ngIf="!isSmall">
     <app-description side="left"
-                    [title]="'Title 6'"
-                    [description]="'Description 6'"></app-description>
+                    [title]="endgameIncomeTitle"
+                    [description]="endgameIncomeDescription"></app-description>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="chartColSpan">
-    6
+    <google-chart [height]="endgameIncomeHeight" [width]="endgameIncomeWidth"
+                  [type]="endgameIncome.type"
+                  [options]="endgameIncome.options"
+                  [columnNames]="endgameIncome.columnNames"
+                  [data]="endgameIncome.data"></google-chart>
   </mat-grid-tile>
 </mat-grid-list>
 

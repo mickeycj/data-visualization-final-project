@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { NgApexchartsModule } from 'ng-apexcharts';
-
 import { MaterialModule } from './material.module';
+
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -22,7 +23,8 @@ import { DescriptionComponent } from './components/description/description.compo
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    GoogleChartsModule.forRoot('AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY')
   ],
   providers: [],
   bootstrap: [AppComponent]
