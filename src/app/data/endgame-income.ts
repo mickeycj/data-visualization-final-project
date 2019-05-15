@@ -26,6 +26,7 @@ export const ENDGAME_INCOME = {
   },
   columnNames: ['Country', 'Gross Income'],
   data: [
+    ['Argentina', { v: 12308365, f: '$ 12.3 M' }],
     ['Australia', { v: 52067559, f: '$ 52.0 M' }],
     ['Austria', { v: 6338991, f: '$ 6.3 M' }],
     ['Belgium', { v: 6024240, f: '$ 6.0 M' }],
