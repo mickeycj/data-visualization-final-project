@@ -64,7 +64,7 @@ export const ENDGAME_INCOME = {
     ['Portugal', { v: 3888473, f: '$ 3.9 M' }],
     ['Romania', { v: 2553091, f: '$ 2.6 M' }],
     ['Russia', { v: 42501812, f: '$ 42.5 M' }],
-    ['Serbia & Montenegro', { v: 675434, f: '$ 675.4 K' }],
+    ['Serbia', { v: 675434, f: '$ 675.4 K' }],
     ['Singapore', { v: 12493287, f: '$ 12.5 M' }],
     ['Slovakia', { v: 1841865, f: '$ 1.8 M' }],
     ['Slovenia', { v: 551814, f: '$ 551.8 K' }],
