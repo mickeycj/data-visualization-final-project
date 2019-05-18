@@ -33,7 +33,7 @@ export const ENDGAME_INCOME = {
     ['Bolivia', { v: 2612447, f: '$ 2.6 M' }],
     ['Brazil', { v: 72534333, f: '$ 72.5 M' }],
     ['Bulgaria', { v: 1333473, f: '$ 1.3 M' }],
-    ['Canada', { v: 73797837, f: '$ 73.8 M' }],
+    ['Canada', { v: 37438294, f: '$ 37.4 M' }],
     ['Chile', { v: 15871727, f: '$ 15.9 M' }],
     ['China', { v: 601595201, f: '$ 601.6 M' }],
     ['Colombia', { v: 15487111, f: '$ 15.5 M' }],
@@ -79,7 +79,7 @@ export const ENDGAME_INCOME = {
     ['Ukraine', { v: 5424965, f: '$ 5.4 M' }],
     ['United Arab Emirates', { v: 11336078, f: '$ 11.3 M' }],
     ['United Kingdom', { v: 104405677, f: '$ 104.4 M' }],
-    ['United States', { v: 664180537, f: '$ 664.2 M' }],
+    ['United States', { v: 711327576, f: '$ 711.3 M' }],
     ['Uruguay', { v: 1036908, f: '$ 1.0 M' }],
     ['Venezuela', { v: 375040, f: '$ 375.0 K' }],
     ['Vietnam', { v: 11128696, f: '$ 11.1 M' }]
