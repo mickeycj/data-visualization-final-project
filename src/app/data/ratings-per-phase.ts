@@ -2,15 +2,7 @@ export const RATINGS_PER_PHASE_TITLE = 'Movie ratings of the last three MCU phas
 
 export const RATINGS_PER_PHASE_DESCRIPTION = `
   Marvel Stuidos chose to split the universe into different phases, where each phase had a clear
-  goal in mind on what it wanted to establish to the audiences.<br/>Phase 1 introduced us to the world's
-  mightiest heroes, the original six, and ended with the assemble of the team against an alien
-  invasion.<br/>Phase 2 followed with the growth of each pre-existing characters, along with
-  the introduction of the Guardian of the Galaxies. It ended with establishing an internal conflict
-  among the Avengers.<br/>Phase 3 showed the aftermath of the conflicts created, introduced
-  the new generation of potential earth-bound heroes, as well as the most powerful hero within the
-  MCU: Captain Marvel. In this phase, Thanos was shown to be unstoppable, succedding in causing
-  the 'Decimation' which affected all the living things across the universe. Can the surviving
-  Avengers undo what Thanos did?
+  goal in mind on what it wanted to establish to the audiences.
 `;
 
 export const RATINGS_PER_PHASE = {
